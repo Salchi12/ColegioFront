@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AlumnosComponent } from './components/alumnos/alumnos.component';
 import { GrabarAlumnoComponent } from './components/grabar-alumno/grabar-alumno.component';
+import { GrabarProfesorComponent } from './components/grabar-profesor/grabar-profesor.component';
+import { ProfesoresComponent } from './components/profesores/profesores.component';
 
 
 const routes: Routes = [
@@ -26,6 +28,23 @@ const routes: Routes = [
   {
     path: 'alumno/eliminar/{id}',
     component: AlumnosComponent,
+  },
+  {
+    path: 'profesor/listar',
+    component: ProfesoresComponent
+  },
+  {
+    path: 'profesor/agregar',
+    component: GrabarProfesorComponent,
+  },
+
+  {
+    path: 'profesor/editar/:id',
+    component: GrabarProfesorComponent,
+  },
+  {
+    path: 'profesor/eliminar/{id}',
+    component: ProfesoresComponent,
   }
 
   

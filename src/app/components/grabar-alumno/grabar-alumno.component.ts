@@ -34,13 +34,14 @@ export class GrabarAlumnoComponent implements OnInit {
     this.activatedRoute.paramMap.subscribe((param)=>{
       var id = Number(param.get('id'));
       this.getAlumno(id);
+      this.edit= true;
     })
 
   }
 
   getAlumno(id: Number){
     this.alumnoService.getAlumno(id).subscribe((data)=>{
-      //this.alumno = data;
+      this.alumno = data;
     });
   }
 
@@ -50,7 +51,6 @@ export class GrabarAlumnoComponent implements OnInit {
     this.alumnoService.saveAlumno(this.alumno)
     .subscribe(
           res => {
-            console.log(res);
             this.router.navigate(['/alumno/listar']);
           },
           err => console.log(err)

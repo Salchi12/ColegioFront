@@ -9,17 +9,18 @@ import { Observable } from 'rxjs';
 })
 export class AlumnoService {
 
-  API_URI = 'https://proyectointegrador-backend.herokuapp.com/alumno';
+  //API_URI = 'https://proyectointegrador-backend.herokuapp.com/alumno';
+  API_URI = 'http://localhost:8080/alumno';
 
   constructor(
     private http: HttpClient
   ) { }
 
-  getAlumnos() {
+  getAlumnos(): Observable<any> {
     return this.http.get(`${this.API_URI}/listar`);
   }
 
-  getAlumno(id: Number) {
+  getAlumno(id: Number): Observable<any> {
     return this.http.get(`${this.API_URI}/${id}`);
   }
 
@@ -28,8 +29,6 @@ export class AlumnoService {
   }
 
   updateAlumno(alumno: Alumno): Observable<Object> {
-    console.log("update",alumno);
-    console.log("id", alumno.idalumnos);
     return this.http.put(`${this.API_URI}/editar/${alumno.idalumnos}`, alumno);
   }
 

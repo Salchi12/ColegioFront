@@ -9,13 +9,17 @@ import { NavegacionComponent } from './components/navegacion/navegacion.componen
 import { AppRoutingModule } from './app-routing.module';
 import { GrabarAlumnoComponent } from './components/grabar-alumno/grabar-alumno.component';
 import { FormsModule } from '@angular/forms';
+import { ProfesoresComponent } from './components/profesores/profesores.component';
+import { GrabarProfesorComponent } from './components/grabar-profesor/grabar-profesor.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AlumnosComponent,
     NavegacionComponent,
-    GrabarAlumnoComponent
+    GrabarAlumnoComponent,
+    ProfesoresComponent,
+    GrabarProfesorComponent
   ],
   imports: [
     BrowserModule,

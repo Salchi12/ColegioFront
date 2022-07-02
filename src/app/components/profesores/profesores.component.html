@@ -1,0 +1,35 @@
+<table class="table">
+    <thead class="thead-light text-center">
+      <tr>
+        <th>Nombre</th>
+        <th>Apellido</th>
+        <th>DNI</th>
+        <th>Direccion</th>
+        <th>Fecha Nacimiento</th>
+        <th></th>
+        <th></th>
+      </tr>
+    </thead>
+    <tbody class="text-center">
+      <tr *ngFor="let profesor of profesorLista">
+        <td>{{ profesor.nombre }}</td>
+        <td>{{ profesor.apellido }}</td>
+        <td>{{ profesor.dni }}</td>
+        <td>{{ profesor.direccion }}</td>
+        <td>{{ profesor.fecha_nacimiento}}</td>
+        <td>
+          <a class="btn btn-primary" [routerLink]="['/profesor/editar',profesor.idprofesores]">
+            <i class="fas fa-edit"></i>
+          </a>
+        </td>
+        <td>
+          <button class="btn btn-danger" (click)="deleteProfesor(profesor.idprofesores)">
+          <i class="far fa-trash-alt"></i>
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="div">
+    <button type="button" class="btn btn-primary mt-5" (click)="crearPdf()">Descargar reporte</button>
+  </div>
