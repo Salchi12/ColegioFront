@@ -9,8 +9,8 @@ import { Observable } from 'rxjs';
 })
 export class AlumnoService {
 
-  //API_URI = 'https://proyectointegrador-backend.herokuapp.com/alumno';
-  API_URI = 'http://localhost:8080/alumno';
+  API_URI = 'https://proyectointegrador-backend.herokuapp.com/alumno';
+  //API_URI = 'http://localhost:8080/alumno';
 
   constructor(
     private http: HttpClient

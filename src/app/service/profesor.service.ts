@@ -8,8 +8,8 @@ import { Profesor } from '../models/profesor';
 })
 export class ProfesorService {
 
-  //API_URI = 'https://proyectointegrador-backend.herokuapp.com/profesor';
-  API_URI = 'http://localhost:8080/profesor';
+  API_URI = 'https://proyectointegrador-backend.herokuapp.com/profesor';
+  //API_URI = 'http://localhost:8080/profesor';
 
   constructor(
     private http: HttpClient
