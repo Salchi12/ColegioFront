@@ -69,7 +69,7 @@ export class ProfesoresComponent implements OnInit {
     
        tempArr.push(
          { 
-           DNI: alumnos[i].dni, 
+           
            Nombre: alumnos[i].nombre,
            Apellido: alumnos[i].apellido,
            Direccion: alumnos[i].direccion
@@ -77,11 +77,11 @@ export class ProfesoresComponent implements OnInit {
       );
       var dd = {
         info:{
-          title: "Lista de alumnos",
+          title: "Lista de profesores",
         },
         content: [
           { text: 'Listado de Alumnos', style: 'header' },
-          this.table(tempArr, ['DNI', 'Nombre', 'Apellido', 'Direccion'])
+          this.table(tempArr, [ 'Nombre', 'Apellido', 'Direccion'])
         ],
         Styles: {
           header: {
