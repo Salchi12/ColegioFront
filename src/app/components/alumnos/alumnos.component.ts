@@ -68,8 +68,7 @@ export class AlumnosComponent implements OnInit {
     for(var i=0; i<alumnos.length; i++){
     
        tempArr.push(
-         { 
-           DNI: alumnos[i].dni, 
+         {  
            Nombre: alumnos[i].nombre,
            Apellido: alumnos[i].apellido,
            Direccion: alumnos[i].direccion
@@ -81,7 +80,7 @@ export class AlumnosComponent implements OnInit {
         },
         content: [
           { text: 'Listado de Alumnos', style: 'header' },
-          this.table(tempArr, ['DNI', 'Nombre', 'Apellido', 'Direccion'])
+          this.table(tempArr, [ 'Nombre', 'Apellido', 'Direccion'])
         ],
         Styles: {
           header: {
