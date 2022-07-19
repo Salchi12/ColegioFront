@@ -22,7 +22,6 @@ export class GrabarAlumnoComponent implements OnInit {
         idalumnos: 0,
         nombre: '',
         apellido: '',
-        dni: '',
         fecha_nacimiento: new Date(),
         direccion: '',
         morosos: 0,
