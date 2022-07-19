@@ -20,7 +20,7 @@ export class GrabarProfesorComponent implements OnInit {
     private activatedRouter: ActivatedRoute) { 
       this.profesor ={
         idprofesores:0,
-        dni:'',
+        
         nombre:'',
         apellido:'',
         direccion:'',
