@@ -1,6 +1,6 @@
 export interface Profesor{
     idprofesores:number;
-    dni:string;
+    //dni:string;
     nombre:string;
     apellido:string;
     direccion:string;
